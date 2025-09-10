@@ -22,28 +22,10 @@ export default function CompareSlider({
 
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl ${heightClass}`}>
-      {/* BEFORE 이미지 */}
-      <Image
-        src={before}
-        alt={altBefore}
-        fill
-        className="object-cover select-none"
-      />
-
-      {/* AFTER 이미지 (클리핑 마스크로 반만 보이게) */}
-      <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
-      >
-        <Image
-          src={after}
-          alt={altAfter}
-          fill
-          className="object-cover select-none"
-        />
+      <Image src={before} alt={altBefore} fill className="object-cover select-none" />
+      <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}>
+        <Image src={after} alt={altAfter} fill className="object-cover select-none" />
       </div>
-
-      {/* 드래그 바 */}
       <input
         type="range"
         min="0"

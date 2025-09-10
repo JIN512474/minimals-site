@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 공통 초기화 */
 html, body { margin: 0; padding: 0; }
 
-/* 모바일 가로 캐러셀에서 스크롤바 숨김 */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

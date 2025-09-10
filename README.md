@@ -38,3 +38,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 >>>>>>> 9b38462 (Initial commit from Create Next App)
+public/
+└─ products/
+   ├─ denim-dark/01.jpg
+   ├─ denim-black/01.jpg
+   └─ jacket-crop-black/01.jpg
