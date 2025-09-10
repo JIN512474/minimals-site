@@ -1,19 +1,20 @@
+// app/layout.tsx
 import "./globals.css";
-import { Poppins } from "next/font/google";
-import type { Metadata } from "next";
+import { LanguageProvider } from "../components/LanguageProvider";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
-
-export const metadata: Metadata = {
-  title: "MINIMALS — Small Frame, Big Style",
-  description: "160~170cm 남성을 위한 전용 핏, 미니멀즈핏",
+export const metadata = {
+  title: "MINIMALS",
+  description: "Small Frame, Big Style.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Server Component여도 OK: 내부에 Client Provider를 렌더링합니다.
   return (
     <html lang="ko">
-      <body className={`${poppins.className} min-h-screen bg-white text-neutral-900`}>
-        {children}
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

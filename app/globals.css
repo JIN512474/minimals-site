@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- 추가 글로벌 스타일 --- */
-:root { --bg: #ffffff; --fg: #171717; }
-html, body { background: var(--bg); color: var(--fg); margin: 0; padding: 0; }
-a { text-decoration: none; }
-* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
